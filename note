@@ -1,0 +1,105 @@
+# advantages
+* khi chúng ta có một api mà các fields trả về cho mobile và web là khác nhau ???
+
+# GraphQL-Architecture
+* gồm có 3 thành phần chính:
+    * GraphQL server kết nối đến database
+    * GraphQL server tích hợp vào hệ thống hiện có
+    * Hybrid approach
+* GraphQL Server with Connected database
+    * server sẽ đọc payload và tải dữ liệu từ database
+* GraphQL Server Integrating Exissting Systems
+    * GraphQL sẽ đứng và xử lý toàn bộ các request trước khi gửi lại response cho client
+* Hybrid Approach
+
+# GraphQL-Application Components
+* các thành phần chính của graphql
+    * Server-side
+    * Client-side
+* Server-Side Components
+    * Là thành phần dùng để parse các queries từ client. Apollo Server được sử dụng để có thể giao tiếp được với GraphQL
+    * Schema
+    * Query
+    * Resolver
+* Client-Side Components
+    * GraphiQL: cung cấp một giao diện để có thể dùng để test GraphQL
+    * ApolloClient: là một công cụ để build GraphQL client
+
+# GraphQL-Example
+* file schema là file định nghĩa cấu trúc dữ liệu
+* resolver là file thực thi query
+
+# GraphQL-Type System
+* Dùng để định nghĩa schema data của graphql
+    * Scalar
+    * Object
+    * Query
+    * Mutation
+    * Enum
+## Scalar Type
+* lưu trữ kiểu dữ liệu cơ bản
+    * Int-32 bit
+    * Float
+    * String
+    * Boolean-True of False
+    * ID
+* cú pháp dùng để định nghĩa là
+    * field: data_type
+## Object Type
+* đóng gói các thuộc tính vào trong một đối tượng
+* cú pháp định nghĩa
+     type object_type_name {
+        field1: data_type,
+        filed2: data_type,
+        ...
+        fieldn: data_type
+     }
+* Ex
+type Student {
+    stud_id: ID
+    firstname: String
+    age: Int
+    score: Float
+}
+type Query {
+     stud_detail:[Student]
+}
+    * stud_detail: sẽ trả về một list danh sách Student
+## Query Type
+* dùng để tải dữ liệu về từ Server
+* cú pháp
+    type Query {
+        greeting: String
+    }
+## Mutation Type
+* Sử dụng để gửi data đến các hàm của server: create, update, delete
+## Enum Type
+## List Type
+* cú pháp
+    field: [data_type]
+* ex
+    type Query {
+        todos: [String]
+    }
+## Non-Nullable Type
+* trong một số trường hợp thì có một số field yêu cầu giá trị default không được null, chúng ta có thể sử dụng (!)
+
+# GraphQL-Schema
+* sử dụng func makeExecutableSchema để có thể run được các schema đã định nghĩa
+* các tham số
+    * typeDefs: tham số bắt buộc, nó dùng để định nghĩa query data của GraphQL
+    * Resolvers: tham số không bắt buộc, nó dùng để xử lý các query
+    * logger: tham số không bắt buộc, nó dùng để print các error của server ra màn hình console
+    * parseOptions:
+    * allowUndefinedInResolve: mặc định là true, kh xét là false gặp ra error sẽ trả về undefined
+    * resolverValidationOptions
+    * inheritResolversFromInterfaces
+* chúng ta sử dụng 'notarealdb' để fake data
+
+# GraphQL-Resolver
+* chúng ta có thể định nghĩa các context cho các hàm
+* resolver: có thể trả về các kiểu dữ liệu: null, undefined, array, promise, scalar or object
+* chúng ta có thể thêm field vào trong schema
+
+# ref
+* https://www.tutorialspoint.com/graphql/index.htm
