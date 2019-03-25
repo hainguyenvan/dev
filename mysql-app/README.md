@@ -44,3 +44,5 @@ mutation {
 ```
 # Ref
 * https://www.manifold.co/blog/build-a-cms-api-with-graphql-and-apollo-server-ae6a5d5c7fb3
+* Merge schema file
+  * https://blog.apollographql.com/modularizing-your-graphql-schema-code-d7f71d5ed5f2
