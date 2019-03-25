@@ -23,10 +23,22 @@ mutation {
 ```
 {
   posts {
-    id,contents
-    user{
-      id,firstName, lastName
+    id
+    contents
+    user {
+      id
+      firstName
+      lastName
+      fullName
     }
+  }
+}
+```
+* create post
+```
+mutation {
+  createPost(contents: "test 105", date: "20190324", userID: 3) {
+    id
   }
 }
 ```

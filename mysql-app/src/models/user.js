@@ -46,6 +46,20 @@ class UserModel {
         })
     }
 
+    getByID(id) {
+        return new Promise((fulfill, reject) => {
+            this.model.findOne({
+                id: id
+            })
+                .then(user => {
+                    fulfill(user);
+                })
+                .catch(err => {
+                    reject(err);
+                })
+        });
+    }
+
     getAll() {
         return new Promise((fulfill, reject) => {
             this.model.findAll()

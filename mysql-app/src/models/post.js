@@ -37,8 +37,20 @@ class PostModel {
     insert(data) {
         return new Promise((fulfill, reject) => {
             this.model.create(data)
-                .then(result => {
-                    fulfill(result);
+                .then(data => {
+                    fulfill(data);
+                })
+                .catch(err => {
+                    reject(err);
+                })
+        })
+    }
+
+    getAll() {
+        return new Promise((fulfill, reject) => {
+            this.model.findAll()
+                .then(dataList => {
+                    fulfill(dataList);
                 })
                 .catch(err => {
                     reject(err);

@@ -5,7 +5,7 @@ var db = require('./db');
 
 const Post = {
     user(root) {
-        return db.users.get(root.userID);
+        return UserModel.getByID(root.userID);
     }
 }
 
@@ -24,8 +24,8 @@ const Query = {
         return UserModel.getAll();
     },
 
-    posts(root, args, context, info) {
-        return db.posts.list();
+    posts() {
+        return PostModel.getAll();
     }
 }
 
@@ -38,6 +38,11 @@ const Mutation = {
         }
         let insertResult = await UserModel.insert(createUser);
         return insertResult;
+    },
+
+    async createPost(root, args, context, info) {
+        let insertData = await PostModel.insert(args);
+        return insertData;
     }
 }
 

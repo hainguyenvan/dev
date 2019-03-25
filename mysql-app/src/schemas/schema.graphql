@@ -15,7 +15,9 @@ type User {
 }
 
 type Mutation {
-   createUser(firstName: String!, lastName: String!, age: Int!): User
+   createUser(firstName: String!, lastName: String!, age: Int!): User,
+   
+   createPost(date: String!,contents:String!, userID: Int!): Post
 }
 
 type Query {
