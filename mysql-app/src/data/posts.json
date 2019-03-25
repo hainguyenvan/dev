@@ -1,0 +1,44 @@
+[
+    {
+        "id": "post-101",
+        "date": "20190325",
+        "contents": "test data user 101",
+        "userID": "user-101"
+    },
+    {
+        "id": "post-102",
+        "date": "20190325",
+        "contents": "test data user 102",
+        "userID": "user-102"
+    },
+    {
+        "id": "post-103",
+        "date": "20190325",
+        "contents": "test data user 102",
+        "userID": "user-102"
+    },
+    {
+        "id": "post-104",
+        "date": "20190325",
+        "contents": "test data user 101",
+        "userID": "user-101"
+    },
+    {
+        "id": "post-105",
+        "date": "20190325",
+        "contents": "test data user 101",
+        "userID": "user-101"
+    },
+    {
+        "id": "post-106",
+        "date": "20190325",
+        "contents": "test data user 101",
+        "userID": "user-101"
+    },
+    {
+        "id": "post-107",
+        "date": "20190325",
+        "contents": "test data user 101",
+        "userID": "user-101"
+    }
+]

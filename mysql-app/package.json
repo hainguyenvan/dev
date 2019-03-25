@@ -1,0 +1,23 @@
+{
+  "name": "hello-world-server",
+  "version": "1.0.0",
+  "description": "example graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "author": "hai nguyen van <hai213k57@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^1.4.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^3.1.1",
+    "mysql2": "^1.6.5",
+    "notarealdb": "^0.2.2",
+    "sequelize": "^5.1.1"
+  }
+}
