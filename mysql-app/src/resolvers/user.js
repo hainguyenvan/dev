@@ -1,13 +1,4 @@
-var UserModel = require('./models/user');
-var PostModel = require('./models/post');
-
-var db = require('./db');
-
-const Post = {
-    user(root) {
-        return UserModel.getByID(root.userID);
-    }
-}
+var UserModel = require('../models/user');
 
 const User = {
     fullName(root) {
@@ -16,17 +7,9 @@ const User = {
 }
 
 const Query = {
-    greeting() {
-        return 'Test Success, GraphQL server is up & running !!';
-    },
-
     users() {
         return UserModel.getAll();
     },
-
-    posts() {
-        return PostModel.getAll();
-    }
 }
 
 const Mutation = {
@@ -38,18 +21,11 @@ const Mutation = {
         }
         let insertResult = await UserModel.insert(createUser);
         return insertResult;
-    },
-
-    async createPost(root, args, context, info) {
-        let insertData = await PostModel.insert(args);
-        return insertData;
     }
 }
-
 
 module.exports = {
     Query,
     Mutation,
-    Post,
     User
 }
