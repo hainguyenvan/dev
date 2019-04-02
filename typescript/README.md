@@ -56,6 +56,19 @@ $ npm ./build/hello-world.js
 * class scope - là biến được khai báo ở bên trong của class và được truy cập thông qua class
 * local scope - là biến được khai báo ở bên trong của phương thức
 
+# operators
+
+# functions
+
+# string method
+* charAt(): trả vê ký tự ở vị trí index
+* charCodeAt(): trả về code của ký tự ở vị trí index
+* concat(): hàm nối chuỗi
+* indexOf(): hàm trả về index của ký tự trong chuối (first)
+* lastIndexOf(): hàm trả về index của ký tự cuối cùng trong chuỗi
+* slice(): lấy chuỗi từ first đến last
+
+
 # ref
 * https://www.tutorialspoint.com/typescript/typescript_overview.htm
 * https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d
