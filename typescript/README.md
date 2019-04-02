@@ -38,6 +38,24 @@ $ npm run tsc
 $ npm ./build/hello-world.js
 ```
 
+# types
+### any type
+* any data type: hỗ trợ tất cả các kiểu dữ liệu
+### built-in type
+* number: kiểu dữ liệu số
+* string: kiểu dữ liệu chuỗi
+* boolean: true or false
+* void: sử dụng để làm kết quả trả về của một hàm
+* null
+* undefined
+### user-defined type
+* user-defined type: kiểu dữ liệu do người dùng định nghĩa
+
+# variable scope
+* global scope - là biến được khai báo ở ngoài class và bất cứ ai cũng có thể truy cập
+* class scope - là biến được khai báo ở bên trong của class và được truy cập thông qua class
+* local scope - là biến được khai báo ở bên trong của phương thức
+
 # ref
 * https://www.tutorialspoint.com/typescript/typescript_overview.htm
 * https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d
