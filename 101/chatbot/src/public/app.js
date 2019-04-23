@@ -29,8 +29,8 @@ function getNow() {
 }
 
 
-var API_GET_ANSWER = 'http://localhost:8080/chat-bot/getAnswer';
-var API_TRAINING = 'http://localhost:8080/chat-bot/training';
+var API_GET_ANSWER = 'http://172.104.167.189:8080/chat-bot/getAnswer';
+var API_TRAINING = 'http://172.104.167.189:8080/chat-bot/training';
 var app = angular.module('appChatBot', []);
 app.controller('myCtrl', function ($scope, $http) {
     $scope.messageList = [
