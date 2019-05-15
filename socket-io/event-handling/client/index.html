@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Get Data</title>
+    <script src="socket.io.js"></script>
+</head>
+
+<body>
+    <div id="results"> This text will change </div>
+    <div id="date">sample another temp text</div>
+    <script>
+        // client code here
+        var socket = io.connect('localhost:3000/vietmed');
+        socket.on('sendData', function (message) {
+            console.log(message)
+            document.getElementById("date").innerHTML = message;
+        });
+
+        socket.emit('emitData', { key: "test" });
+    </script>
+</body>
+
+</html>
