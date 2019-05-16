@@ -12,13 +12,15 @@
     <div id="date">sample another temp text</div>
     <script>
         // client code here
-        var socket = io.connect('localhost:3000/vietmed');
-        socket.on('sendData', function (message) {
+        var socket = io.connect('localhost:3001/vietmed');
+        var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHZpZXRtZWQuY29tLnZuIiwiaWQiOjEsInBrIjoiVVNSXzAiLCJpYXQiOjE1NTc4OTQ1NTUsImV4cCI6MTU1Nzk4MDk1NX0.cCqeWoW6myka8mtYQCaenKJlwxg23F6ZPtHwmZglZxE';
+        socket.on('updateStatusRepair_USR_0', function (message) {
             console.log(message)
             document.getElementById("date").innerHTML = message;
         });
-
-        socket.emit('emitData', { key: "test" });
+        socket.on('test', function (data) {
+            console.log(data);
+        });
     </script>
 </body>
 
