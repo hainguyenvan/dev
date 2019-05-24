@@ -27,7 +27,7 @@ $ npm run tsc -- --init
 * Install lib
 ```
 $ npm install express -s
-$ npm install @type/express -s
+$ npm install @types/express -s
 ```
 * Compiling our first application
 ```
