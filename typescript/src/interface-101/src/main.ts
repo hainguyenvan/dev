@@ -1,6 +1,7 @@
 console.log('demo code interfaces typescript ...');
 
 import { User101 } from './models/User101';
+import { SingletonPattern } from './models/singleton';
 
 interface PersonI {
     getFirstName(): string,
@@ -73,3 +74,9 @@ console.log('=== user 101 ===');
 var user101 = new User101('hainv', 25);
 console.log('full name: ', user101.fullName);
 console.log('age: ', user101.age);
+console.log('toString: ', user101.toString());
+
+console.log('=== singleton pattern ===');
+var singleton = SingletonPattern.getInstance();
+console.log('singleton: ', singleton);
+var singleton = SingletonPattern.getInstance();
