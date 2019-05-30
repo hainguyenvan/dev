@@ -1,26 +1,25 @@
 # Environment Setup
-* Install angular 6, we require the following
+* Yêu cầu cài đặt môi trường
     * Nodejs
     * Npm
     * Angular CLI
-    * IDE for wirting your code
 
 ## Nodejs
-* Check version nodejs
+* Kiểm tra nodejs version
 ```
 $ node -v
 ```
-* Check version npm
+* Kiểm tra npm version
 ```
 $ npm -v
 ```
 
 # Angular CLI
-* Install angular cli
+* Cài đặt angular cli
 ```
 $ npm install -g @angular/cli
 ```
-* Check version angular
+* Kiểm tra angular version
 ```
 $ ng -v
 ```
