@@ -12,5 +12,8 @@ public class Main {
 
     Student student = (Student)factory.getBean("student");
     student.displayInfo();
+
+    Employee employee = (Employee)factory.getBean("employee");
+    employee.show();
   }
 }
