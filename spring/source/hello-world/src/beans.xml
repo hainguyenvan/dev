@@ -1,18 +1,36 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
-<beans xmlns = "http://www.springframework.org/schema/beans"
-  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation = "http://www.springframework.org/schema/beans
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-  <bean id = "student" class = "Student">
-    <property name = "name" value = "Hello World!"/>
+  <bean class="Student" id="student">
+    <property name="name" value="Hello World!"/>
   </bean>
 
-  <bean id = "employee" class = "Employee">
-<!--    <property name = "name" value = "Hello World!"/>-->
+  <bean class="Employee" id="employee">
+    <!--    <property name = "name" value = "Hello World!"/>-->
     <constructor-arg name="name" value="hainv"></constructor-arg>
     <constructor-arg name="id" value="10"></constructor-arg>
+  </bean>
+
+  <bean class="Address" id="address">
+    <constructor-arg name="city" value="ha noi"/>
+  </bean>
+
+  <bean class="Address1" id="address1">
+    <constructor-arg name="city" value="dong anh"/>
+  </bean>
+
+  <bean class="EmployeeAddress" id="employeeAddress">
+    <constructor-arg name="name" value="hainv"/>
+    <constructor-arg name="address">
+      <ref bean="address"/>
+    </constructor-arg>
+    <constructor-arg name="address1">
+      <ref bean="address1"/>
+    </constructor-arg>
   </bean>
 
 </beans>
