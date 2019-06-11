@@ -6,9 +6,15 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
 
 
 @SpringBootApplication
@@ -16,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Main implements ApplicationRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
+    private Map<String, Product> productRepo = new HashMap<String, Product>();
 
     public static void main(String[] args) {
         logger.info("Run example demo !");
@@ -31,5 +38,18 @@ public class Main implements ApplicationRunner {
     @RequestMapping(value = "/")
     public String hello() {
         return "hello world !";
+    }
+
+    @RequestMapping(value = "/products")
+    public ResponseEntity<Object> getProducts() {
+        Product pro1 = new Product("pro1");
+        this.productRepo.put("1",pro1);
+        return  new ResponseEntity<Object>("Product is created successfully", HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/products", method = RequestMethod.POST)
+    public ResponseEntity<Object> insertProduct(@RequestBody Product product) {
+        System.out.println("products: "+ product);
+        return new ResponseEntity<Object>("Product is created successfully", HttpStatus.CREATED);
     }
 }
