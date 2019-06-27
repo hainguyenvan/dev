@@ -56,3 +56,5 @@ sub.domain.tld/class_name.{media_type}?var=value&more-var-value-pairs
 ```
 * ref:
     * https://restfulapi.net/http-status-codes/
+    * https://medium.com/@weblab_tech/encrypted-client-server-communication-protection-of-privacy-and-integrity-with-aes-and-rsa-in-c7b180fe614e
+    * https://github.com/weblab-technology/rsa-aes-client-server-encryption-nodejs-example/tree/master/static

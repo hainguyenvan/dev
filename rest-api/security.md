@@ -30,3 +30,9 @@ var rsaWrapper = function (direction) {
 
 ## 3. Mã hóa dữ liệu trả về
 * Sử dụng một cặp khóa public key và private key. Private key được gửi cho client để có thể giải mã được data, còn public key sẽ được server dùng để mã hóa data
+
+## Ref
+* https://automationrhapsody.com/implement-secure-rest-api-authentication-http/
+
+## RSA online
+* https://8gwifi.org/rsafunctions.jsp

@@ -1,0 +1,15 @@
+{
+  "name": "sercurity-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hainv",
+  "license": "ISC",
+  "dependencies": {
+    "node-rsa": "^1.0.5",
+    "ursa": "^0.9.4"
+  }
+}
