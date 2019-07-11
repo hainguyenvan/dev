@@ -16,10 +16,13 @@ client.get(stringKey, function(error, result) {
 
 // del key
 console.log('=== del key ===');
+//  0: false
+//  1: true
 client.del(stringKey, (err, result) => {
     if (err) {
         console.log(err);
         return;
     }
     console.log('del key: ', result);
+    client.quit();
 })
