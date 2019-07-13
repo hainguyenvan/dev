@@ -14,13 +14,21 @@ ref.on('value', function (snapshot) {
 });
 
 // set data firebase
-var userRef = ref.child('users');
-userRef.set([{
-        name: 'jack',
-        age: 21
-    },
-    {
-        name2: 'jack2',
-        age: 23
-    }
-]);
+// var userRef = ref.child('users');
+// userRef.set({
+//     test1: {
+//         name: 'jack',
+//         age: 21
+//     },
+//     test2: {
+//         name2: 'jack2',
+//         age: 23
+//     }
+// });
+
+
+// update data
+var userRef = ref.child('users/test1');
+userRef.update({
+    age: 29
+});
