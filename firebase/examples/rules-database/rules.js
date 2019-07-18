@@ -1,3 +1,25 @@
+// config rules
+// {
+//     "rules": {
+//         "users" : {
+//             ".read": true,
+//                 ".write": true,
+//                     "$uid": {
+//                 "name": {
+//                     ".validate": "newData.isString()"
+//                 },
+//                 "age": {
+//                     ".validate": "newData.isNumber()"
+//                 },
+//                 "phoneNumber" : {
+//                     ".validate": "newData.isString() && newData.val().length == 11"
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
 const firebase = require('firebase');
 firebase.initializeApp({
     databaseURL: 'https://hello-world-82545.firebaseio.com'
