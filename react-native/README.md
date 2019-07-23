@@ -22,3 +22,6 @@ src
 	i18n: chứa config về mutiple language
 	reducers: thứ mục chứa reducers
 ```
+
+# Tuts
+* https://facebook.github.io/react-native/docs/getting-started
