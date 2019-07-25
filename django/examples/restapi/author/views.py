@@ -1,10 +1,11 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from django.core import serializers
 
 from .models import Author
 from .serializers import AuthorSerializer
-
+from ..utils.utils import utils
 
 class AuthorView(APIView):
 
@@ -44,10 +45,22 @@ class AuthorView(APIView):
     def put(self,req, id):
         try:
             body = req.data
-            res = {
-                'status': 200,
-                'msg':'successfully',
-                'data': {}
+            saved_author = Author.objects.get(id=id)
+            data =  utils.convert_obj_to_serializers(saved_author)
+            print('email', saved_author.email)
+            # print('saved author: ', data)
+            serializer = AuthorSerializer(instance=saved_author, data=body,  partial=True)
+            if serializer.is_valid(raise_exception=True):
+                saved_author = serializer.save()
+                res = {
+                    'status': 200,
+                    'msg':'successfully',
+                    'data': saved_author
+                }
+                return Response(res)
+            res =  {
+                'status': status.HTTP_400_BAD_REQUEST,
+                'msg': serializer.errors
             }
             return Response(res)
         except  Exception as err:
