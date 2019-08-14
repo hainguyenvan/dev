@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  chatbot-neo4j:
+    image: neo4j:3.5.8
+    container_name: "chatbot-neo4j"
+    # environment:
+    #   NEO4J_AUTH: neo4j/newPassword
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./data:/data
+      - ./logs:/logs
+    # links:
+    #   - php
+    # volumes_from:
+    #   - app-data
