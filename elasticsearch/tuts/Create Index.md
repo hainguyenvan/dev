@@ -11,33 +11,33 @@ http://localhost:9200/customer
 ```
 PUT customer
 {
-    "settings" : {
-        "number_of_shards" : 1,
-        "number_of_replicas": 1,
-        "analysis": {
-            "analyzer": {
-            "analyzer-name": {
-                "type": "custom",
-                "tokenizer": "keyword",
-                "filter": "lowercase"
-            }
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 1,
+    "analysis": {
+      "analyzer": {
+        "analyzer-name": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": "lowercase"
         }
-   }
-    },
-    "mappings" : {
-        "properties" : {
-            "age": {
-               "type": "long"
-            },
-            "experienceInYears": {
-                "type": "long"
-            },
-            "name": {
-                "type": "text",
-                "analyzer": "analyzer-name"
-            }
-        }
+      }
     }
+  },
+  "mappings": {
+    "properties": {
+      "age": {
+        "type": "long"
+      },
+      "experienceInYears": {
+        "type": "long"
+      },
+      "name": {
+        "type": "text",
+        "analyzer": "analyzer-name"
+      }
+    }
+  }
 }
 ```
 

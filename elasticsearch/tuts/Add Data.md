@@ -9,10 +9,11 @@ http://localhost:9200/customer/_doc
 - Body
 
 ```
+POST
 {
-"name": "Andrew3",
-"age" : 45,
-"experienceInYears" : 10
+  "name": "Andrew3",
+  "age": 45,
+  "experienceInYears": 10
 }
 ```
 
