@@ -15,6 +15,8 @@ const promise02 = () => {
 };
 
 const main = async () => {
+  let a = 10;
+  let b = `string ${a}`;
   console.log("Run examples...");
   await promise01();
   promise02();

@@ -1,6 +1,6 @@
 const promise01 = () => {
   return new Promise((fulfill, reject) => {
-    setTimeout(function() {
+    setTimeout(function () {
       console.log("Promise01");
       fulfill(true);
     }, 3000);
@@ -16,8 +16,8 @@ const promise02 = () => {
 
 const main = () => {
   console.log("Run example ...");
-  //   promise01();
-  //   promise02();
+  // promise01();
+  // promise02();
   // synchronize
   promise01()
     .then(data => {
