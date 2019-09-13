@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  rabbitmq-example:
+    build: .
+    container_name: "rabbitmq-example"
+    # env_file: .env
+    # volumes:
+    #   - ./logs:/usr/src/app/logs
+    #   - ./src:/usr/src/app/src
+    #   - ./ssl:/usr/src/app/ssl
+    #   - ./package.json:/usr/src/app/package.json
+    ports:
+      - 15671:15671
+      - 15672:15672
