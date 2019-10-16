@@ -16,7 +16,7 @@ import { CatsService } from '../cats/cats.service';
 import { CreateDogDto } from './dogs.dto';
 
 @Controller('dogs')
-export class CatsController {
+export class DogsController {
   constructor(private readonly dogsService: DogsService) {}
 
   @Get()
