@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class CatsService {
+export class DogsService {
   getAll(payload) {
     return payload;
   }

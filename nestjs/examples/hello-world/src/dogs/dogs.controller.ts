@@ -11,33 +11,34 @@ import {
 import { Request, Response } from 'express';
 
 // dto
-import { CatsService } from './cats.service';
-import { CreateCatDto } from './cats.dto';
+import { DogsService } from './dogs.service';
+import { CatsService } from '../cats/cats.service';
+import { CreateDogDto } from './dogs.dto';
 
-@Controller('cats')
+@Controller('dogs')
 export class CatsController {
-  constructor(private readonly catsService: CatsService) {}
+  constructor(private readonly dogsService: DogsService) {}
 
   @Get()
   getAll(@Req() req: Request, @Res() res: Response) {
     res.status(HttpStatus.CREATED).send({
-      msg: 'Successfuly Cat',
+      msg: 'Successfuly Dog',
     });
   }
 
   @Get(':id')
   getByID(@Req() req: Request, @Res() res: Response, @Param('id') id) {
     res.status(HttpStatus.OK).send({
-      msg: 'Successfuly Cat',
+      msg: 'Successfuly Dog',
     });
   }
 
   @Post()
-  create(@Req() req: Request, @Res() res: Response, @Body() dto: CreateCatDto) {
+  create(@Req() req: Request, @Res() res: Response, @Body() dto: CreateDogDto) {
     console.log('dto: ', dto);
     console.log('headers: ', req.headers);
     dto.name = 'test12';
-    this.catsService
+    this.dogsService
       .create(dto)
       .then(data => {
         res.status(HttpStatus.OK).send({
