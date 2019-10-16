@@ -11,10 +11,13 @@ import {
 import { Request, Response } from 'express';
 
 // dto
+import { CatsService } from './cats.service';
 import { CreateCatDto } from './cats.dto';
 
 @Controller('cats')
 export class CatsController {
+  constructor(private readonly catsService: CatsService) {}
+
   @Get()
   getAll(@Req() req: Request, @Res() res: Response) {
     res.status(HttpStatus.CREATED).send({
@@ -34,9 +37,10 @@ export class CatsController {
     console.log('dto: ', dto);
     console.log('headers: ', req.headers);
     dto.name = 'test12';
+    const data = this.catsService.create(dto);
     res.status(HttpStatus.OK).send({
       msg: 'Successfuly',
-      data: dto,
+      data: data,
     });
   }
 }
