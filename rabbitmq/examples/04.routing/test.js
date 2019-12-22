@@ -1,30 +1,44 @@
-const amqp = require('amqplib/callback_api');
+const amqp = require("amqplib/callback_api");
 
-amqp.connect('amqp://guest:guest@192.168.1.41', (err, connect) => {
+amqp.connect("amqp://guest:guest@127.0.0.1", (err, connect) => {
+  if (err) {
+    throw err;
+  }
+
+  connect.createChannel((err, channel) => {
     if (err) {
-        throw err;
+      throw err;
     }
 
-    // connect rabbitmq
-    connect.createChannel((err, channel) => {
-        if (err) {
-            throw err;
-        }
+    let exchange = "tracking.system.router";
+    let router = "locations.gps";
+    let queue = "locations.gps.queue";
 
-        let exchange = 'direct_logs';
-        let router = 'info';
-        let msg = 'Hello World!';
-        channel.assertExchange(exchange, 'direct', {
-            durable: false,
-        });
-
-        // send message to queue with router info
-        channel.publish(exchange, '', Buffer.from(msg));
-        console.log('[x] Sent msg %s to router %s', msg, router);
+    channel.assertExchange(exchange, "direct", {
+      durable: false
     });
 
-    setTimeout(() => {
-        connect.close();
-        process.exit(0);
-    }, 500);
+    channel.assertQueue(
+      queue,
+      {
+        exclusive: true
+      },
+      (err, q) => {
+        if (err) {
+          throw err;
+        }
+        console.log("[x] Waiting for logs.");
+
+        // router info
+        channel.bindQueue(q.queue, exchange, router);
+        channel.consume(q.queue, msg => {
+          console.log("[x] Msg: ", msg.content.toString());
+          console.log("[x] Routing: ", msg.fields.routingKey);
+        });
+      },
+      {
+        noAck: true
+      }
+    );
+  });
 });
