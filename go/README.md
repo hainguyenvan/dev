@@ -6,9 +6,18 @@
 # tar -C /usr/local -xzf go1.13.4.linux-amd64.tar.gz
 # $HOME/.profile
 ```
-* Run Hello World
+* Create Hello Worlds
 ```
-$ go run hellowrold.go
+package main
+imprort "fmt"
+
+func main() {
+    fmt.Printf("Hello Worlds")
+}
+```
+* Run hello world
+```
+$ go run helloworld.go
 ```
 
 # Ref
