@@ -1,8 +1,12 @@
-package main
+// package main
 
-import "fmt"
+// import (
+// 	"fmt"
+// 	"time"
+// )
 
-// comments 
-func main() {
-	fmt.Println("Hello World ")
-}
+// // comments
+// func main() {
+// 	fmt.Println("Hello World ")
+// 	fmt.Println("The time is", time.Now())
+// }
