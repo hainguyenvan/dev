@@ -37,3 +37,27 @@
   * Nếu vẫn không tham gia thì team sẽ làm theo những gì mà team cho là quan trọng nhất
 
 ### Tại sao chất lượng là thứ không thể thỏa hiệp
+
+## 9. Chúng tôi Sơ kết Sprint ra sao ?
+* Trong buổi sơ kết Sprint thì chỉ nển tập trung vào demo những thứ mà chúng ta đã làm được hơn là trình bày cách mà chúng ta đã làm
+
+## 10. Chúng tôi cải tiến Sprint như thế nào
+* Các yếu tố cần cải tiến trong Sprint
+  * Tốt: nếu chúng tôi có thể làm lại một Sprint tưonwg tự như vậy, chúng tôi có thể  làm những công việc tương tự theo cách này
+  * Có thể làm tốt hơn: chúng ta có thể làm tốt hơn được nữa không
+  * Cải tiến: ý tưởng gì để cải tiến trong tương lai không
+* Phải cần khoảng nghỉ giữa 2 Sprint
+  * Cách tố nhất là: Thứ 6 họp kết thúc Sprint, Thứ 2 tuần sau họp bắt đầu Sprint mới (Để cho mọi người có khoảng thời gian nghỉ ngơi)
+* Trong mỗi Sprint sẽ cố gắng có một ngày gọi là lab days (ngày mà bạn có thể làm bất kể những gì bạn muốn)
+  * Nếu bạn muốn có ngày lab days, lịch tốt nhất sẽ là: Thứ 5 tổng kết Sprint, Thứ 6 lab days, Thứ 2 ngày bắt đầu Sprint mới (Mỗi Sprint thì chỉ có 8 ngày dev, nên cần cân nhắc mực độ của Sprint để team có thể đạt được quy trình làm việc)
+
+## 12. Chúng tôi lập kế hoạch phát hành và định giá các hợp đồng như thế nào
+* Lập kế hoạch phát hành giúp chúng ta cố  gắng trả lời câu hỏi "khi nào, hoặc muộn nhất, chúng ta sẽ có thể chuyển giao được phiên bản 1.0 của hệ thống mới này"
+* Các cuộc họp phải tuân thủ khung thời gian
+* Khi bắt đầu Sprint mới thì sẽ dùng một khoảng thời gian để có thể vừa fix bug của Spint trước mà vừa có thể làm Sprint mới
+* Tập trung hoàn thành các tính năng của một Sprint, sau đó mới chuyển sang một Sprint mới
+
+## 15. Chúng tôi quản lý nhiều nhóm Scrum như thế nào
+* Tùy thuộc vào việc tương tác giữa mọi người với nhau trong nhóm Scrum mà có tách nhóm hay không.
+* Kích thước nhóm từ 3-8 người (5-9) tùy vào từng project cụ thể mà ta sẽ có cái đánh giá và cải thiện hợp lý
+* Cần thận khi đưa một thành viên part time vào nhóm Scrum
